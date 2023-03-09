@@ -21,6 +21,7 @@ Department.init(
       isAlpha: true,
       max: 30,
       },
+      
     },
   },
   {

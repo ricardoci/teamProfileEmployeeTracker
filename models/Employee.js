@@ -37,8 +37,8 @@ Employee.init(
       },
       
       manager_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: true
         
      
       },
