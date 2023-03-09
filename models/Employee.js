@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const Role = require('./Role');
 
 class Employee extends Model {}
 
@@ -20,7 +21,7 @@ Employee.init(
       max: 30,
       },
     
-
+    },
       last_name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -28,6 +29,7 @@ Employee.init(
         max: 30,
         },
       
+      },
       role_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -42,8 +44,8 @@ Employee.init(
       },
     },
       
-    },
-  },
+    
+ 
   {
     sequelize,
     timestamps: false,
@@ -53,4 +55,5 @@ Employee.init(
   }
 );
 
+Employee.belongsTo(Role, { foreignKey: 'role_id' });
 module.exports = Employee;

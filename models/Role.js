@@ -5,36 +5,30 @@ class Role extends Model {}
 
 Role.init(
   {
-   
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
-   
+      autoIncrement: true
     },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate:{
-      max: 30,
-      },
-      salary: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate:{
-            isDecimal: true,
-        }
-     
-      },
-      department_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        
-     
-      },
-      
+      validate: {
+        max: 30
+      }
     },
+    salary: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isDecimal: true
+      }
+    },
+    department_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    }
   },
   {
     sequelize,
