@@ -25,6 +25,11 @@ Role.init(
         isDecimal: true
       }
     },
+    department_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      
+    },
     department_id: {
       type: DataTypes.INTEGER,
       allowNull: false
